@@ -4,7 +4,7 @@ pipeline{
     stages {
         stage('Build and run') {
             parallel {
-                stage('master-agent-pipeline') {
+                stage('Job-one-pipeline') {
                     stages{
                         stage('Build') {
                             steps {
@@ -18,7 +18,7 @@ pipeline{
                         }
                     }
                 }
-                stage('ubuntu-agent-pipeline') {
+                stage('Job-two-pipeline') {
                     stages{
                         stage('Build') {
                             steps {
@@ -28,9 +28,6 @@ pipeline{
                         stage('Test') {
                             steps {
                                 echo 'Testing...'
-                            }
-                            steps {
-                                echo 'Testing done '
                             }
                         }
                     }
