@@ -1,4 +1,3 @@
-#parallel job
 pipeline{
     agent none
 
